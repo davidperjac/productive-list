@@ -1,0 +1,19 @@
+input {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin: 2rem;
+	height: 3rem;
+	width: 15rem;
+	outline: none;
+	border-radius: 15px;
+	border: 3px solid;
+	text-align: center;
+	&::placeholder {
+		padding-left: 1rem;
+	}
+	&:focus,
+	&:hover {
+		border: 3px solid #00adb5;
+	}
+}
