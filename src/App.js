@@ -1,17 +1,13 @@
 import './App.scss';
 import { AppUI } from './AppUI';
-import { TodoProvider } from './Context/TodoContext';
-
-// const defaultTodos = [
-// 	{ text: 'Ver curso de Platzi', completed: false },
-// 	{ text: 'Decir a Valeria que la amas', completed: false },
-// 	{ text: 'Organizar cuarto', completed: false },
-// ];
+import { TodoProvider, ThemeProvider } from './Context/TodoContext';
 
 function App() {
 	return (
 		<TodoProvider>
-			<AppUI />
+			<ThemeProvider>
+				<AppUI />
+			</ThemeProvider>
 		</TodoProvider>
 	);
 }

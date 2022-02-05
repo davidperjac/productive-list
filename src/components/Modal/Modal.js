@@ -4,12 +4,15 @@ import { Backdrop } from './Backdrop';
 import { ImCross } from 'react-icons/im';
 import './modal.scss';
 
-import { TodoContext } from '../../Context/TodoContext';
+import { TodoContext, ThemeContext } from '../../Context/TodoContext';
 
 export const Modal = ({ handleClose }) => {
 	const [todo, setTodo] = useState('');
 	const [error, setError] = useState(false);
 	const { addTodos } = useContext(TodoContext);
+
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 
 	const dropIn = {
 		hidden: {
@@ -60,11 +63,10 @@ export const Modal = ({ handleClose }) => {
 				animate="visible"
 				exit="exit"
 				onKeyPress={(e) => handleEnter(e)}
-				style={
-					{
-						//backgroundColor: darkMode ? '#191919' : 'white',
-					}
-				}
+				style={{
+					backgroundColor: darkMode ? '#222831' : '#EEEEEE',
+					color: darkMode ? '#EEEEEE' : '#222831',
+				}}
 			>
 				<ImCross
 					onClick={handleClose}

@@ -6,6 +6,10 @@ body {
 	background-color: #eeeeee;
 	letter-spacing: 2px;
 	scrollbar-width: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 ::-webkit-scrollbar {

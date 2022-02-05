@@ -12,7 +12,7 @@ export const TodoSearch = () => {
 	return (
 		<div>
 			<input
-				spellcheck="false"
+				spellCheck="false"
 				value={search}
 				placeholder="Search..."
 				onChange={onSearchChange}
