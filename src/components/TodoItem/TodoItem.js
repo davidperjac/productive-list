@@ -1,12 +1,13 @@
 import React from 'react';
 import Checkbox from '../Checkbox/Checkbox';
 import { ImCross } from 'react-icons/im';
+import { BsFillTrashFill } from 'react-icons/bs';
 import './TodoItem.scss';
 
 export const TodoItem = ({ completed, text, onComplete, onDelete }) => {
 	return (
 		<li>
-			<Checkbox onComplete={onComplete} />
+			<Checkbox onComplete={onComplete} text={text} />
 			<p
 				style={{
 					textDecoration: completed ? 'line-through' : '',
@@ -14,10 +15,10 @@ export const TodoItem = ({ completed, text, onComplete, onDelete }) => {
 			>
 				{text}
 			</p>
-			<ImCross
+			<BsFillTrashFill
 				onClick={onDelete}
 				style={{ marginRight: '1rem' }}
-				className="cross"
+				className="trash"
 			/>
 		</li>
 	);

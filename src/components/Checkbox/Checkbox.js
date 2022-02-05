@@ -8,8 +8,16 @@ import {
 	useChain,
 } from 'react-spring';
 
-function Checkbox({ onComplete }) {
-	const [isChecked, setIsChecked] = useState(false);
+function Checkbox({ onComplete, text }) {
+	const storedTodos = localStorage.getItem('TODOS');
+	let checked;
+
+	if (storedTodos) {
+		const todos = JSON.parse(storedTodos);
+		checked = todos.filter((todo) => todo.text === text)[0].completed;
+	}
+
+	const [isChecked, setIsChecked] = useState(checked);
 	const checkboxAnimationRef = useSpringRef();
 	const checkboxAnimationStyle = useSpring({
 		backgroundColor: isChecked ? '#00ADB5' : '#fff',
@@ -45,8 +53,6 @@ function Checkbox({ onComplete }) {
 			<animated.svg
 				style={checkboxAnimationStyle}
 				className={`checkbox ${isChecked ? 'checkbox--active' : ''}`}
-				// This element is purely decorative so
-				// we hide it for screen readers
 				aria-hidden="true"
 				viewBox="0 0 15 11"
 				fill="none"

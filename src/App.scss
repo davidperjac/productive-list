@@ -1,6 +1,7 @@
 .app {
 	display: flex;
 	justify-content: space-around;
+	height: 100%;
 	.svg {
 		width: 35rem;
 		height: 35rem;
@@ -18,8 +19,6 @@
 		background-color: #393e46;
 		margin-top: 5rem;
 		border: 3px solid #222831;
-		&:hover {
-			border: 3px solid #00adb5;
-		}
+		margin-bottom: 4rem;
 	}
 }
