@@ -1,3 +1,8 @@
+@import '../../globals.scss';
+
 .text {
 	text-align: center;
+	@include mobile {
+		font-size: 20px;
+	}
 }

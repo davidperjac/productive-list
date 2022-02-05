@@ -14,7 +14,7 @@ export const TodoSearch = () => {
 			<input
 				spellCheck="false"
 				value={search}
-				placeholder="Search..."
+				placeholder="Filter..."
 				onChange={onSearchChange}
 			/>
 		</div>

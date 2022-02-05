@@ -11,6 +11,8 @@ import { Switch } from './components/Switch/Switch';
 
 import { ThemeContext } from './Context/TodoContext';
 
+import SVG from './todoSVG.svg';
+
 export const AppUI = () => {
 	const { filter, toggleCompleteTodos, deleteTodos } = useContext(TodoContext);
 
@@ -26,12 +28,7 @@ export const AppUI = () => {
 		>
 			<Switch />
 			<div className="wrapper">
-				<img
-					src="./todo.svg"
-					alt="todosvg"
-					className="svg"
-					draggable="false"
-				></img>
+				<img src={SVG} alt="todosvg" className="svg" draggable="false"></img>
 				<div className="todo">
 					<TodoCounter />
 					<TodoSearch />
