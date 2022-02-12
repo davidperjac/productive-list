@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { MdDarkMode } from 'react-icons/md';
 import { BsFillSunFill } from 'react-icons/bs';
 
-import { ThemeContext } from '../../Context/TodoContext';
+import { ThemeContext } from '../../Context/context';
 
 import './Switch.scss';
 

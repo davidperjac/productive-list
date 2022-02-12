@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import './CreateTodoButton.scss';
-import { Modal } from '../Modal/Modal';
+import { ModalCreateTodo } from '../Modal/ModalCreateTodo';
 
-export const CreateTodoButton = () => {
+export const CreateTodoButton = ({ addTodos }) => {
 	const [modalOpen, setModalOpen] = useState(false);
 
 	const toggleModal = () => {
@@ -20,7 +20,9 @@ export const CreateTodoButton = () => {
 				exitBeforeEnter={true}
 				onExitComplete={() => null}
 			>
-				{modalOpen && <Modal handleClose={toggleModal} />}
+				{modalOpen && (
+					<ModalCreateTodo handleClose={toggleModal} addTodos={addTodos} />
+				)}
 			</AnimatePresence>
 		</div>
 	);

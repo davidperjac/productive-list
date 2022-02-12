@@ -1,16 +1,11 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Backdrop } from './Backdrop';
-import { ImCross } from 'react-icons/im';
-import './modal.scss';
 
-import { TodoContext, ThemeContext } from '../../Context/TodoContext';
+import { ThemeContext } from '../../Context/context';
+import './Modal.scss';
 
-export const Modal = ({ handleClose }) => {
-	const [todo, setTodo] = useState('');
-	const [error, setError] = useState(false);
-	const { addTodos } = useContext(TodoContext);
-
+export const Modal = (props) => {
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
@@ -40,21 +35,12 @@ export const Modal = ({ handleClose }) => {
 
 	const handleEnter = (e) => {
 		if (e.charCode === 13) {
-			handleSubmit();
-		}
-	};
-
-	const handleSubmit = () => {
-		if (todo === '') {
-			setError(true);
-		} else {
-			addTodos(todo);
-			handleClose();
+			props.handleSubmit();
 		}
 	};
 
 	return (
-		<Backdrop onClick={handleClose}>
+		<Backdrop onClick={props.handleClose}>
 			<motion.div
 				onClick={(e) => e.stopPropagation()}
 				className="modal"
@@ -68,19 +54,7 @@ export const Modal = ({ handleClose }) => {
 					color: darkMode ? '#EEEEEE' : '#222831',
 				}}
 			>
-				<ImCross
-					onClick={handleClose}
-					style={{ marginRight: '1rem' }}
-					className="cross"
-				/>
-				<h1>Write your new TODO</h1>
-				{error && <h2 style={{ color: 'red' }}>Write something else!</h2>}
-				<input
-					placeholder="Drink water"
-					value={todo}
-					onChange={(e) => setTodo(e.target.value)}
-				></input>
-				<button onClick={handleSubmit}>Add</button>
+				{props.children}
 			</motion.div>
 		</Backdrop>
 	);

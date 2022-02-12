@@ -1,14 +1,12 @@
 import './App.scss';
 import { AppUI } from './AppUI';
-import { TodoProvider, ThemeProvider } from './Context/TodoContext';
+import { ThemeProvider } from './Context/context';
 
 function App() {
 	return (
-		<TodoProvider>
-			<ThemeProvider>
-				<AppUI />
-			</ThemeProvider>
-		</TodoProvider>
+		<ThemeProvider>
+			<AppUI />
+		</ThemeProvider>
 	);
 }
 

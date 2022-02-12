@@ -14,7 +14,9 @@ function Checkbox({ onComplete, text }) {
 
 	if (storedTodos) {
 		const todos = JSON.parse(storedTodos);
-		checked = todos.filter((todo) => todo.text === text)[0].completed;
+		if (todos) {
+			checked = todos.filter((todo) => todo.text === text)[0].completed;
+		}
 	}
 
 	const [isChecked, setIsChecked] = useState(checked);
