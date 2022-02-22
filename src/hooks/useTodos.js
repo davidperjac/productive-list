@@ -37,15 +37,20 @@ export const useTodos = () => {
 		saveTodos(newTodos);
 	};
 
-	return {
-		completedTodos,
+	const states = {
 		totalTodos,
+		completedTodos,
 		search,
-		setSearch,
 		filter,
+	};
+
+	const stateSetters = {
+		setSearch,
 		toggleCompleteTodos,
 		deleteTodos,
 		addTodos,
 		sincronize,
 	};
+
+	return { states, stateSetters };
 };

@@ -14,22 +14,18 @@ import { useTodos } from './hooks/useTodos';
 import { Header } from './components/Header/Header';
 
 export const AppUI = () => {
-	const {
-		completedTodos,
-		totalTodos,
-		search,
-		setSearch,
-		filter,
-		toggleCompleteTodos,
-		deleteTodos,
-		addTodos,
-		sincronize,
-	} = useTodos();
+	const { state, stateSetters } = useTodos();
+
+	const { totalTodos, completedTodos, search, filter } = state;
+
+	const { setSearch, toggleCompleteTodos, deleteTodos, addTodos, sincronize } =
+		stateSetters;
 
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
 
 	const darkStyle = { backgroundColor: darkMode ? '#222831' : '#EEEEEE' };
+
 	const darkStyleText = {
 		color: darkMode ? '#EEEEEE' : '#222831',
 		textAlign: 'center',

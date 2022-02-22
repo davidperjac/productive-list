@@ -21,5 +21,5 @@ export function useStorageListener(sincronize) {
 		window.location.reload();
 	};
 
-	return { storageChange, toggleShow };
+	return [ storageChange, toggleShow ];
 }
