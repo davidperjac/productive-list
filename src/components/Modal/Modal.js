@@ -1,9 +1,9 @@
-import { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
 import { Backdrop } from './Backdrop';
 
 import { ThemeContext } from '../../Context/context';
-import './Modal.scss';
+import './modal.scss';
 
 export const Modal = (props) => {
 	const theme = useContext(ThemeContext);

@@ -1,22 +1,22 @@
 import React, { useContext } from 'react';
 
-import { TodoSearch } from './components/TodoSearch/TodoSearch';
-import { TodoList } from './components/TodoList/TodoList';
-import { TodoItem } from './components/TodoItem/TodoItem';
-import { CreateTodoButton } from './components/CreateTodoButton/CreateTodoButton';
 import { ChangeAlert } from './components/ChangeAlert/ChangeAlert';
+import { CreateTodoButton } from './components/CreateTodoButton/CreateTodoButton';
+import { TodoItem } from './components/TodoItem/TodoItem';
+import { TodoList } from './components/TodoList/TodoList';
+import { TodoSearch } from './components/TodoSearch/TodoSearch';
 
 import { Switch } from './components/Switch/Switch';
 import { ThemeContext } from './Context/context';
 
-import SVG from './todoSVG.svg';
-import { useTodos } from './hooks/useTodos';
 import { Header } from './components/Header/Header';
+import { useTodos } from './hooks/useTodos';
+import SVG from './todoSVG.svg';
 
 export const AppUI = () => {
-	const { state, stateSetters } = useTodos();
+	const { states, stateSetters } = useTodos();
 
-	const { totalTodos, completedTodos, search, filter } = state;
+	const { totalTodos, completedTodos, search, filter } = states;
 
 	const { setSearch, toggleCompleteTodos, deleteTodos, addTodos, sincronize } =
 		stateSetters;
