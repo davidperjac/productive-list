@@ -74,7 +74,7 @@ npm start
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/davidperjac/productive-list/blob/main/LICENSE.md) for more information.
+Distributed under the Mozilla Public License 2.0. See [LICENSE](https://github.com/davidperjac/productive-list/blob/master/LICENSE.md) for more information.
 
 ## Authors
 
