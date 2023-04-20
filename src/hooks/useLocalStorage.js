@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useReducer } from 'react';
 
 export function useLocalStorage(itemName, initialValue) {
