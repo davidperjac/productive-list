@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <a href="https://github.com/davidperjac/productive-list">
+    <img src="public/images/todoLogo.png" alt="Logo" width="150" height="150">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Productive Todo List</h3>
 
-## Available Scripts
+  <p align="center">
+    A simple yet awesome Todo List!
+    <br/>
+    <br/>
+  </p>
+</p>
 
-In the project directory, you can run:
+![Contributors](https://img.shields.io/github/contributors/davidperjac/productive-list?color=dark-green) ![Issues](https://img.shields.io/github/issues/davidperjac/productive-list) ![License](https://img.shields.io/github/license/davidperjac/productive-list) 
 
-### `npm start`
+## Table Of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [About the Project](#about-the-project)
+* [Technologies Used](#technologies-used)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+* [License](#license)
+* [Authors](#authors)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About The Project
 
-### `npm test`
+![Screen Shot](public/images/light.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a simple Todo List web application built using React. The application allows users to add and remove tasks, mark tasks as complete, and filter tasks by name. The application has been designed with a clean and intuitive user interface with dark mode included, making it easy for users to manage their tasks.
 
-### `npm run build`
+![Screen Shot](public/images/dark.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The main goal of this project is to demonstrate the use of React in building a modern web application. It also serves as a good starting point for developers who are new to React and want to learn how to build real-world applications using the library.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screen Shot](public/images/modal.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It was built to practice the use of Custom Hooks, the usage of Context API and the implementation of a Dark Mode. 
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This application was built with: 
+-  React 
+-  Framer Motion
+-  Context API
+-  SCSS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To use this application, simply clone the repository, install the dependencies, and start the development server. Here are the steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. Clone the repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone https://github.com/davidperjac/productive-list.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install NPM packages
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Start the development server
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Open your web browser on `http://localhost:3000`
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Distributed under the MIT License. See [LICENSE](https://github.com/davidperjac/productive-list/blob/main/LICENSE.md) for more information.
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **David Perez** - *FullStack Developer* - [David Perez](https://github.com/davidperjac) - *App*
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
